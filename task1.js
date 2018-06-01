@@ -4,7 +4,7 @@ function palindrome(argv) {
 		
 		var str = argv[2];
 
-		if (10000>=str.length>=1) {
+		if (10000>=str.length && str.length >=1) {
 
 		  	var re = /[\W_]/g;
 		  	var lowRegStr = str.toLowerCase().replace(re, '');
