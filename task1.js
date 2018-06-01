@@ -10,9 +10,12 @@ function palindrome(argv) {
 		  	var lowRegStr = str.toLowerCase().replace(re, '');
 		  	var reverseStr = lowRegStr.split('').reverse().join(''); 
 
-			process.stdout.write(reverseStr === lowRegStr ? 'YES': 'NO');
+			return reverseStr === lowRegStr ? 'YES': 'NO';
 		}
 	}
 }
 
-palindrome(process.argv);
+if (process.argv.length>2) {
+	process.stdout.write(palindrome(process.argv));
+}
+
