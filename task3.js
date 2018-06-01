@@ -30,5 +30,7 @@ function splitter(argv) {
 
 
 if (process.argv.length>2) {
-	process.stdout.write(splitter(process.argv));
+	if (process.argv[2].length>=1 && process.argv[2].length<=10000) {
+		process.stdout.write(splitter(process.argv));
+	} 
 }
